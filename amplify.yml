@@ -1,0 +1,17 @@
+version: 1
+decompressArtifacts: false
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Pre-build phase"
+    build:
+      commands:
+        - echo "No build needed for static site"
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths: []
+
