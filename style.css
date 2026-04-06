@@ -125,6 +125,36 @@ body {
 .bento-item:hover { transform: scale(1.02); }
 .featured { grid-column: span 2; background: #000; color: #fff; }
 
+.featured {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important; /* Remove parent padding to let video go edge-to-edge */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bento-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none; /* Prevents the video from interfering with clicks/hovers */
+}
+
+.featured .bento-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    width: 100%;
+    /* Optional: subtle gradient to ensure white text is readable over any video content */
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+
+
 /* Buttons */
 .btn-solid {
     background: var(--apple-blue);
@@ -211,3 +241,4 @@ body {
     max-width: 720px;
     margin: 0 auto;
 }
+
