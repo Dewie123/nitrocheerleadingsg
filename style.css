@@ -251,24 +251,72 @@ body {
 
 /* Footer */
 .apple-footer {
-    padding: 10px 10px;
+    background: #f5f5f7;
+    padding: 40px 40px;
     border-top: 1px solid #d2d2d7;
-    background: var(--apple-grey);
-    margin: 0 auto;
 }
 
 .footer-grid {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
-.footer-form input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #d2d2d7;
-    margin-right: 10px;
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-col h4 {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1d1d1f;
+}
+
+.footer-col p {
+    font-size: 12px;
+    color: #86868b;
+    margin-bottom: 20px;
+}
+
+/* Developer Specific Styles */
+.developer-credit {
+    padding-top: 10px;
+}
+
+.developer-credit p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #86868b;
+}
+
+.designer-name {
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #0071e3; /* Apple Blue */
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.github-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.github-icon {
+    color: #1d1d1f;
 }
 
 /* Value Proposition Section */
