@@ -16,6 +16,7 @@
                 <a href="#explore">Explore</a>
                 <a href="#about">About Us</a>
                 <a href="#portfolio">Portfolio</a>
+                <a href="#services">Services</a>
                 <a href="#" class="nav-cta">Join Now</a>
             </div>
         </div>
@@ -149,6 +150,65 @@
     </div>
 </section>
 
+<section class="services-section" id="services">
+    <div class="section-header">
+        <p class="eyebrow">Our Offerings</p>
+        <h2>Professional Training Programs.</h2>
+    </div>
+
+    <div class="services-grid">
+        <article class="service-card">
+            <div class="service-header">
+                <h3>Cheerleading Classes</h3>
+            </div>
+            <div class="service-details">
+                <div class="service-item">
+                    <span class="service-label">Price</span>
+                    <p class="service-value">$50/month</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-label">Duration</span>
+                    <p class="service-value">60 minutes per session</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-label">Expected Skills</span>
+                    <p class="service-value">Basic stunting, choreography, dance fundamentals, team coordination</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-label">Experience Required</span>
+                    <p class="service-value">Beginner - No prior experience needed</p>
+                </div>
+                <button class="btn-solid service-cta enroll-btn">Enroll Now</button>
+            </div>
+        </article>
+
+        <article class="service-card">
+            <div class="service-header">
+                <h3>Gym Coaching Classes</h3>
+            </div>
+            <div class="service-details">
+                <div class="service-item">
+                    <span class="service-label">Price</span>
+                    <p class="service-value">$45/month</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-label">Duration</span>
+                    <p class="service-value">45 minutes per session</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-label">Expected Skills</span>
+                    <p class="service-value">Flexibility, strength building, acrobatic basics, body control</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-label">Experience Required</span>
+                    <p class="service-value">Beginner - No prior experience needed</p>
+                </div>
+                <button class="btn-solid service-cta enroll-btn">Enroll Now</button>
+            </div>
+        </article>
+    </div>
+</section>
+
 <footer class="apple-footer">
     <div class="footer-grid">
         <div class="footer-col">
@@ -171,20 +231,35 @@
 
 <!-- Modal -->
 <div id="joinModal" class="modal">
+    <div class="modal-overlay"></div>
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <p><a  href="https://wa.me/6593955772?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20your%20services.">Find out more and book with me today!</a></p>
-       <!-- <a href="https://wa.me/6593955772?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
-            
-        </a> -->
-        <br> 
-        <p>Or connect with me on social media:</p>
-        <br> 
-        
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        
-        
+        <div class="modal-header">
+            <h2>Ready to Join Our Community?</h2>
+            <button class="close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="modal-subtitle">Get in touch with us today to enroll in our classes and elevate your game!</p>
+            <div class="modal-divider"></div>
+            <div class="contact-section">
+                <h3>Contact Us</h3>
+                <a href="https://wa.me/6593955772?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="contact-link whatsapp-link">
+                    <span class="contact-icon">💬</span>
+                    <span>Message on WhatsApp</span>
+                </a>
+            </div>
+            <div class="modal-divider"></div>
+            <div class="social-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook-link" title="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link instagram-link" title="Instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -194,25 +269,36 @@
 
    
     var btn = document.querySelector(".nav-cta");
+    var enrollBtns = document.querySelectorAll(".enroll-btn");
 
     
     var span = document.getElementsByClassName("close")[0];
+    var overlay = document.querySelector(".modal-overlay");
 
     
-    btn.onclick = function(event) {
+    var openModal = function(event) {
         event.preventDefault();
         modal.style.display = "block";
     }
 
-    
-    span.onclick = function() {
+    var closeModal = function() {
         modal.style.display = "none";
     }
+
+    btn.onclick = openModal;
+
+    enrollBtns.forEach(function(enrollBtn) {
+        enrollBtn.onclick = openModal;
+    });
+
+    
+    span.onclick = closeModal;
+    overlay.onclick = closeModal;
 
     
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            closeModal();
         }
     }
 </script>
