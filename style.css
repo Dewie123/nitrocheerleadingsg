@@ -401,6 +401,118 @@ body {
     padding: 10px 20px;
 }
 
+/* Reviews Section - Sushi Conveyor Belt Style */
+.reviews-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(245, 245, 247, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+    overflow: hidden;
+}
+
+.reviews-section .section-header {
+    padding: 0 20px 60px;
+}
+
+.reviews-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.reviews-track::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.review-card {
+    flex: 0 0 calc(33.333% - 14px);
+    min-width: 320px;
+    max-width: 380px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.review-stars {
+    font-size: 18px;
+    color: #ffc107;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--apple-black);
+    font-weight: 500;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.review-text::before {
+    content: '"';
+    font-size: 32px;
+    line-height: 0;
+    color: var(--apple-blue);
+    opacity: 0.3;
+    margin-right: 4px;
+}
+
+.review-text::after {
+    content: '"';
+    font-size: 32px;
+    line-height: 0;
+    color: var(--apple-blue);
+    opacity: 0.3;
+    margin-left: 4px;
+}
+
+.review-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--apple-black);
+    margin: 0 0 4px 0;
+}
+
+.review-role {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .review-card {
+        flex: 0 0 calc(50% - 10px);
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        flex: 0 0 calc(100% - 20px);
+        min-width: 280px;
+    }
+}
+
 /* Modal Styles */
 .modal {
     display: none;

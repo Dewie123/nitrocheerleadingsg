@@ -209,6 +209,122 @@
     </div>
 </section>
 
+<section class="reviews-section">
+    <div class="section-header">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>Hear directly from our Athletes.</h2>
+    </div>
+
+    <div class="reviews-carousel">
+        <div class="reviews-track">
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"NitroXCheerSG completely transformed my cheerleading journey. The coaching is exceptional and the community is incredibly supportive!"</p>
+                <p class="review-name">Sarah Lim</p>
+                <p class="review-role">Level 5 Athlete</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Best investment I've made for my fitness. The gym coaching classes are professional, safe, and actually fun."</p>
+                <p class="review-name">Marcus Chen</p>
+                <p class="review-role">Gym Class Student</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"The team's expertise in stunting is unmatched in Singapore. I've grown so much as an athlete here."</p>
+                <p class="review-name">Jessica Tan</p>
+                <p class="review-role">Level 6 Champion</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Highly recommend! The coaches care about each student's progress and create a welcoming environment for beginners."</p>
+                <p class="review-name">David Wong</p>
+                <p class="review-role">New Member</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"The competition preparation is intense but incredibly rewarding. We won our first championship thanks to their training!"</p>
+                <p class="review-name">Emma Rodriguez</p>
+                <p class="review-role">Competitive Team Member</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"I came in with zero experience and now I'm doing partner stunts. Amazing coaching and incredible facilities!"</p>
+                <p class="review-name">Alex Kumar</p>
+                <p class="review-role">Beginner Cheerleader</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"The flexibility and strength training in the gym classes has improved my overall athletic performance significantly."</p>
+                <p class="review-name">Sophie Lee</p>
+                <p class="review-role">Gym Program Graduate</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Best coaches in Singapore, hands down. Their attention to detail and safety standards are unparalleled."</p>
+                <p class="review-name">James Poh</p>
+                <p class="review-role">Parent of Student</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"The community here is like a family. Everyone supports each other, making training enjoyable and motivating."</p>
+                <p class="review-name">Nina Sharma</p>
+                <p class="review-role">Level 5 Athlete</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"From my first day, I felt welcomed and safe. The coaches are patient, knowledgeable, and truly care about our progress."</p>
+                <p class="review-name">Lucas Thompson</p>
+                <p class="review-role">Cheerleading Student</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"I've trained at multiple studios, but NitroXCheerSG stands out for their professional approach and champion mindset."</p>
+                <p class="review-name">Olivia Chen</p>
+                <p class="review-role">Competitive Athlete</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"The gym coaching has helped me build confidence and strength I never thought possible. Highly recommended!"</p>
+                <p class="review-name">Ryan Gonzalez</p>
+                <p class="review-role">Gym Class Member</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Exceptional attention to form and technique. My injuries have healed and I'm performing better than ever."</p>
+                <p class="review-name">Priya Nair</p>
+                <p class="review-role">Advanced Athlete</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"The most professional coaching team I've encountered. Worth every penny. My skills have improved dramatically!"</p>
+                <p class="review-name">Christopher Lee</p>
+                <p class="review-role">Cheerleader</p>
+            </article>
+
+            <article class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"A hidden gem in Singapore's fitness community. The classes are challenging, rewarding, and absolutely worth it!"</p>
+                <p class="review-name">Megan Taylor</p>
+                <p class="review-role">Gym Program Student</p>
+            </article>
+        </div>
+    </div>
+</section>
+
 <footer class="apple-footer">
     <div class="footer-grid">
         <div class="footer-col">
@@ -300,6 +416,45 @@
         if (event.target == modal) {
             closeModal();
         }
+    }
+
+    // Auto-scroll reviews carousel
+    var reviewsTrack = document.querySelector(".reviews-track");
+    if (reviewsTrack) {
+        var scrollAmount = 0;
+        var scrollSpeed = 1; // pixels per frame
+        var pauseOnHover = true;
+        var isPaused = false;
+
+        function autoScroll() {
+            if (!isPaused) {
+                scrollAmount += scrollSpeed;
+                reviewsTrack.scrollLeft = scrollAmount;
+
+                // Reset scroll when reaching the end
+                if (reviewsTrack.scrollLeft >= reviewsTrack.scrollWidth - reviewsTrack.clientWidth) {
+                    scrollAmount = 0;
+                    reviewsTrack.scrollLeft = 0;
+                }
+            }
+            requestAnimationFrame(autoScroll);
+        }
+
+        // Pause on hover
+        reviewsTrack.addEventListener("mouseenter", function() {
+            if (pauseOnHover) {
+                isPaused = true;
+            }
+        });
+
+        reviewsTrack.addEventListener("mouseleave", function() {
+            if (pauseOnHover) {
+                isPaused = false;
+            }
+        });
+
+        // Start auto-scroll
+        autoScroll();
     }
 </script>
 
