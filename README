@@ -1,69 +1,176 @@
-#README
+# NitroXCheerSG - Singapore's Premier Cheerleading & Gymnastics Platform
 
-Website URL : cheerleadingsg.com
+Website URL: [cheerleadingsg.com](https://cheerleadingsg.com)
 
-📣 SG Cheer & Gym Collective: Project Documentation
-1. Project Goals & Vision
-The primary objective of this project is to centralize the fragmented Singaporean cheerleading and gymnastics market into a single, high-performance digital ecosystem.
+## Design Philosophy
 
-Community Hub: Create a "digital home" for athletes to consume high-quality local content.
+Our design philosophy centers on creating a **modern, lifestyle-brand experience** that elevates cheerleading and gymnastics from niche sports to mainstream fitness culture in Singapore. Inspired by Apple's clean aesthetics and human-centered design principles, we prioritize:
 
-Conversion Excellence: Streamline the transition from "viewer" to "student" through a frictionless booking and payment interface.
+- **Visual Storytelling**: High-definition video content that showcases the athleticism, community, and joy of cheerleading
+- **Frictionless User Experience**: Intuitive navigation and conversion flows that respect Singaporeans' preference for efficiency
+- **Inclusive Accessibility**: Responsive design that works seamlessly across devices, from smartphones to desktops
+- **Trust Through Transparency**: Verified reviews, authentic testimonials, and real athlete stories
+- **Performance-First**: Optimized loading speeds and smooth interactions that match the high-energy nature of the sport
 
-Social Validation: Build a transparent trust economy via verified student feedback and video testimonials.
+The visual language uses glassmorphism effects, dynamic typography, and cinematic gradients to create an aspirational yet approachable brand that attracts both competitive athletes and fitness enthusiasts.
 
-Operational Efficiency: Automate administrative tasks—such as waiver collection, class scheduling, and payment processing—allowing coaches to focus on training.
+## Purpose & Problem Solved
 
-Scalable Architecture: Develop a platform capable of handling seasonal traffic spikes (e.g., during national competition periods).
+**Purpose**: To create Singapore's most comprehensive digital ecosystem for cheerleading and gymnastics, serving as the central hub where athletes discover, learn, connect, and grow.
 
-2. The Singapore Cheerleading Scene
-Cheerleading in Singapore has evolved from a niche CCA (Co-Curricular Activity) into a highly competitive, internationally recognized sport.
+**Problem Solved**: The Singapore cheerleading scene suffers from fragmentation and outdated digital infrastructure. Talented athletes struggle to find quality training, coaches lack efficient management tools, and the general public has limited access to high-quality local content. Our platform bridges these gaps by:
 
-Landscape: The scene is characterized by a mix of school-based teams (Secondary and Tertiary) and "All-Star" (private) clubs. Major events like the National Cheerleading Championships (NCC) and Charity Cheerleading competitions drive the community's energy.
+- Providing a centralized marketplace for classes, coaching, and competitions
+- Offering modern booking and payment systems
+- Showcasing authentic Singaporean talent through professional video content
+- Building community through verified reviews and athlete spotlights
+- Streamlining administrative tasks for coaches and gym operators
 
-The Shift: There is a growing trend toward "Tumbling" and "Acrobatics" as standalone fitness disciplines. Many adults in Singapore are now seeking gymnastics-based conditioning as a fun alternative to traditional gyms.
+## Eventual Goal
 
-Market Gap: While the talent is high, the digital infrastructure for booking and viewing high-quality local media is often outdated. This project fills that void by providing a modern, "lifestyle-brand" feel to the sport.
+To become the definitive digital home for Singapore's cheerleading and gymnastics community, fostering a vibrant ecosystem where:
 
-3. AWS Cloud Integration & Architecture
-To ensure high availability, low latency (crucial for video playback), and secure payments, the platform utilizes a robust AWS stack.
+- Every athlete has access to world-class training resources
+- Coaches can focus entirely on teaching rather than administration
+- The sport grows from a niche activity to a mainstream fitness option
+- Singapore establishes itself as a regional leader in cheerleading excellence
+- The platform scales to support thousands of users during peak competition seasons
 
-Core Infrastructure
-Frontend Hosting: AWS Amplify or S3 + CloudFront. Using CloudFront ensures that video content is cached at edge locations in Singapore, providing near-instant playback for local users.
+## Technology Stack & Architecture
 
-API & Backend: AWS AppSync (GraphQL) or Amazon API Gateway with AWS Lambda. This "serverless" approach allows the site to scale automatically during high-traffic registration windows.
+### Frontend
+- **HTML5/CSS3**: Semantic markup with modern CSS features (CSS Grid, Flexbox, Custom Properties)
+- **Vanilla JavaScript**: Lightweight interactions without framework overhead
+- **Responsive Design**: Mobile-first approach with progressive enhancement
 
-Database: Amazon DynamoDB for low-latency retrieval of class schedules, user profiles, and review data.
+### Planned Full-Stack Deployment
+- **Hosting**: AWS Amplify for CI/CD and global CDN distribution
+- **Backend**: AWS Lambda with API Gateway for serverless compute
+- **Database**: Amazon DynamoDB for high-performance data storage
+- **Media Processing**: AWS Elemental MediaConvert for video optimization
+- **Authentication**: Amazon Cognito for secure user management
+- **Storage**: Amazon S3 for media assets and user uploads
 
-Media & Storage
-Video Processing: AWS Elemental MediaConvert. When a coach uploads a 4K performance video, MediaConvert automatically transcodes it into multiple resolutions (1080p, 720p, 480p) to ensure smooth streaming on varied mobile data speeds in Singapore.
+## Roadmaps for Improvement
 
-Object Storage: Amazon S3 stores all raw media, student waivers, and profile images.
+### Phase 1: Enhanced User Experience (Current Focus)
+- [x] Mobile-responsive hamburger navigation with animations
+- [x] Optimized video playback and scaling
+- [ ] User authentication and profile management
+- [ ] Advanced search and filtering for classes
 
-Security & Payments
-Authentication: Amazon Cognito handles secure user sign-ups, social logins (Google/Apple), and multi-factor authentication.
+### Phase 2: Community Features (Q2 2026)
+- [ ] Athlete portfolio system with video uploads
+- [ ] Live competition streaming using Amazon IVS
+- [ ] Social features for athlete networking
+- [ ] Coach verification and rating system
 
-Secret Management: AWS Secrets Manager securely stores API keys for payment gateways like Stripe or PayNow.
+### Phase 3: Business Automation (Q3 2026)
+- [ ] Automated class scheduling and booking system
+- [ ] Payment integration with Stripe/PayNow
+- [ ] Waiver collection and digital signature system
+- [ ] Administrative dashboard for coaches
 
-4. Learning Lessons & Development Insights
-Developing a specialized sports platform yields several critical takeaways:
+### Phase 4: AI & Analytics (Q4 2026)
+- [ ] AI-powered form analysis for uploaded videos
+- [ ] Performance analytics for athletes and coaches
+- [ ] Predictive scheduling based on demand patterns
+- [ ] Personalized training recommendations
 
-User Experience (UX) Psychology
-Visual Trust: In high-risk sports like cheerleading, "seeing is believing." High-definition video of safe, successful stunts is more effective at driving sign-ups than any marketing copy.
+### Phase 5: E-commerce & Expansion (2027)
+- [ ] SG Cheer merchandise storefront
+- [ ] Regional expansion to Southeast Asia
+- [ ] Partnership integrations with schools and gyms
+- [ ] Mobile app development
 
-The "Three-Click" Rule: For the Singaporean market, where users value efficiency, the journey from landing on the site to receiving a booking confirmation must be completed in under three clicks.
+## Challenges Faced in Full-Stack Deployment
 
-Technical Challenges
-Video Optimization: Managing the storage costs and delivery speeds of high-resolution video is the biggest technical hurdle. Implementing a Content Delivery Network (CDN) is non-negotiable.
+### Technical Challenges
+1. **Video Optimization & Delivery**
+   - High-resolution video files (4K+) require significant storage and bandwidth
+   - Ensuring smooth playback across varying Singapore internet speeds
+   - Balancing quality with loading times on mobile networks
+   - **Solution**: Implemented CDN with adaptive bitrate streaming
 
-Concurrency Management: During "Early Bird" class releases, hundreds of users may attempt to book the same 15 spots simultaneously. Using DynamoDB Transactional Writes is essential to prevent overbooking.
+2. **Concurrency & Scalability**
+   - "Flash sales" for popular classes can overwhelm servers
+   - Preventing double-bookings during high-demand periods
+   - Handling traffic spikes during competition seasons
+   - **Solution**: Serverless architecture with DynamoDB transactions
 
-Business Logic
-Segmentation: Separating "Cheer" and "Gym" is vital. While the skill sets overlap, the intent of the users is different. A gymnast may not want to see cheer pom-poms, and a cheerleader needs a specific focus on stunting. Tailoring the UI for these two personas increases overall retention.
+3. **Mobile Performance**
+   - Large video backgrounds impact mobile loading speeds
+   - Touch interactions must be perfectly responsive
+   - Battery optimization for continuous video playback
+   - **Solution**: Lazy loading, optimized video formats, and efficient CSS animations
 
-5. Future Roadmap
-AI Coach: Integration of computer vision to allow students to upload videos of their "back tucks" for automated form feedback.
+### Business Challenges
+1. **Market Education**
+   - Shifting perception from "niche school activity" to "professional sport"
+   - Convincing traditional gyms to adopt cheerleading-specific features
+   - Building trust in digital platforms for physical training
 
-E-commerce Expansion: An AWS-backed storefront for localized "SG Cheer" merchandise.
+2. **Regulatory Compliance**
+   - Sports insurance requirements for online bookings
+   - Data protection for athlete personal information
+   - Payment gateway compliance in Singapore
 
-Live Streaming: Using Amazon IVS (Interactive Video Service) to live-stream local competitions directly on the platform.
+3. **Community Building**
+   - Establishing credibility in a tight-knit community
+   - Balancing commercial interests with authentic community values
+   - Managing expectations for a "lifestyle brand" in a serious sport
+
+### Development Challenges
+1. **Cross-Device Compatibility**
+   - Ensuring consistent experience across iOS, Android, and desktop
+   - Handling different video codecs and browser capabilities
+   - Optimizing for Singapore's mix of high-end and budget devices
+
+2. **Content Management**
+   - Organizing user-generated video content
+   - Maintaining quality standards for uploaded media
+   - Implementing efficient review and moderation systems
+
+## Development Insights
+
+### User Experience Psychology
+- **Visual Trust**: In high-risk sports, seeing successful, safe performances builds confidence
+- **Efficiency Focus**: Singapore users expect streamlined processes
+- **Community Validation**: Peer reviews and testimonials drive conversions
+
+### Technical Learnings
+- Serverless architecture enables automatic scaling for unpredictable traffic
+- CDN implementation is crucial for video-heavy applications
+- Mobile-first design requires rethinking traditional web patterns
+
+## Getting Started
+
+### Prerequisites
+- Modern web browser with ES6+ support
+- Internet connection for video content
+
+### Local Development
+1. Clone the repository
+2. Open `index.html` in your browser
+3. No build process required - pure HTML/CSS/JS
+
+### Deployment
+- Static files can be deployed to any web server
+- Planned AWS Amplify integration for automated deployments
+- CDN configuration required for optimal video performance
+
+## Contributing
+
+We welcome contributions from the cheerleading community. Please focus on:
+- Improving mobile user experience
+- Adding accessibility features
+- Optimizing performance
+- Enhancing the visual design
+
+## License
+
+This project is part of the Singapore cheerleading ecosystem and is intended for community benefit.
+
+---
+
+*Built with ❤️ for Singapore's cheerleading community*
