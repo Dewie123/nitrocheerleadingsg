@@ -12,6 +12,11 @@
     <nav class="glass-nav">
         <div class="nav-content">
             <a href="#" class="logo">NitroXCheerSG</a>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <div class="nav-links">
                 <a href="#explore">Explore</a>
                 <a href="#about">About Us</a>
@@ -19,6 +24,16 @@
                 <a href="#services">Services</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#" class="nav-cta">Join Now</a> 
+            </div>
+            <div class="mobile-menu">
+                <ul class="mobile-nav-links">
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#" class="nav-cta">Join Now</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -457,6 +472,25 @@
         // Start auto-scroll
         autoScroll();
     }
+
+    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    });
 </script>
 
 </body>
