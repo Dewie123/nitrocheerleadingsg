@@ -1,0 +1,7 @@
+.hero-half {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+}

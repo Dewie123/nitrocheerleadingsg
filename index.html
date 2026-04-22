@@ -9,6 +9,8 @@
 </head>
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <nav class="glass-nav">
         <div class="nav-content">
             <a href="#" class="logo">NitroXCheerSG</a>
@@ -21,7 +23,7 @@
                 <a href="#explore">Explore</a>
                 <a href="#about">About Us</a>
                 <a href="#portfolio">Portfolio</a>
-                <a href="#services">Services</a>
+                <a href="#services">Classes</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#" class="nav-cta">Join Now</a> 
             </div>
@@ -30,7 +32,7 @@
                     <li><a href="#explore">Explore</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#services">Classes</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#" class="nav-cta">Join Now</a></li>
                 </ul>
@@ -38,18 +40,33 @@
         </div>
     </nav>
 
-    <header class="apple-hero">
+    <header class="apple-hero" id="main-content">
         <div class="hero-video-container">
             <img src="assets/cheerleading_1.jpg" alt="Hero Background">
         </div>
         <div class="hero-overlay">
-            <div class="hero-text">
-                <p class="eyebrow-1">Master Elite Stunting</p>
-                <h1>Elevate Your Game in Singapore.</h1>
-                <p class="hero-description">The premier destination for competitive cheerleading and professional gymnastics.</p>
-                <div class="hero-actions">
-                    <a href="#" class="btn-solid">Get Started</a>
-                    <a href="#" class="btn-link">Learn more ></a>
+            <div class="hero-content">
+                <div class="hero-half cheer-half">
+                    <div class="hero-text">
+                        <p class="eyebrow-1">Master Elite Stunting</p>
+                        <h1>Cheerleading</h1>
+                        <p class="hero-description">Competitive cheerleading training with championship-winning coaches.</p>
+                        <div class="hero-actions">
+                            <a href="#cheer" class="btn-solid cheer-btn">Start Cheerleading</a>
+                            <a href="#cheer" class="btn-link">Learn more ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-half gym-half">
+                    <div class="hero-text">
+                        <p class="eyebrow-1">Build Strength & Power</p>
+                        <h1>Gym Coaching</h1>
+                        <p class="hero-description">Professional gymnastics and strength training programs.</p>
+                        <div class="hero-actions">
+                            <a href="#gym" class="btn-solid gym-btn">Start Gym Training</a>
+                            <a href="#gym" class="btn-link">Learn more ></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,7 +99,7 @@
                 </div>
             </div>
             <div class="bento-item">
-                <video autoplay muted loop playsinline class="bento-bg-video">
+                <video autoplay muted loop playsinline class="bento-bg-video loading">
                     <source src="assets/cheerleading_4.mp4" type="video/mp4">
                 </video> 
                 <div class="bento-content">
@@ -92,7 +109,7 @@
             </div>
 
             <div class="bento-item">
-                <video autoplay muted loop playsinline class="bento-bg-video">
+                <video autoplay muted loop playsinline class="bento-bg-video loading">
                     <source src="assets/cheerleading_5.mp4" type="video/mp4">
                 </video> 
                 <div class="bento-content">
@@ -141,7 +158,7 @@
         <article class="achievement-card">
             
             <div class="image-wrapper">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Og8k96fyBbk" title="Cheer Rocks 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Og8k96fyBbk" title="Cheer Rocks 2022 Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div class="achievement-meta">
                 <span class="year">2022</span>
@@ -173,7 +190,7 @@
     </div>
 
     <div class="services-grid">
-        <article class="service-card">
+        <article class="service-card cheer-service" id="cheer">
             <div class="service-header">
                 <h3>Cheerleading Classes</h3>
             </div>
@@ -198,7 +215,7 @@
             </div>
         </article>
 
-        <article class="service-card">
+        <article class="service-card gym-service" id="gym">
             <div class="service-header">
                 <h3>Gym Coaching Classes</h3>
             </div>
@@ -234,21 +251,21 @@
     <div class="reviews-carousel">
         <div class="reviews-track">
             <article class="review-card">
-                <div class="review-stars">★★★★★</div>
+                <div class="review-stars" aria-label="4 out of 5 stars">★★★★☆</div>
                 <p class="review-text">"NitroXCheerSG completely transformed my cheerleading journey. The coaching is exceptional and the community is incredibly supportive!"</p>
                 <p class="review-name">Sarah Lim</p>
                 <p class="review-role">Level 5 Athlete</p>
             </article>
 
             <article class="review-card">
-                <div class="review-stars">★★★★★</div>
+                <div class="review-stars" aria-label="4 out of 5 stars">★★★★☆</div>
                 <p class="review-text">"Best investment I've made for my fitness. The gym coaching classes are professional, safe, and actually fun."</p>
                 <p class="review-name">Marcus Chen</p>
                 <p class="review-role">Gym Class Student</p>
             </article>
 
             <article class="review-card">
-                <div class="review-stars">★★★★★</div>
+                <div class="review-stars" aria-label="4 out of 5 stars">★★★★☆</div>
                 <p class="review-text">"The team's expertise in stunting is unmatched in Singapore. I've grown so much as an athlete here."</p>
                 <p class="review-name">Jessica Tan</p>
                 <p class="review-role">Level 6 Champion</p>
@@ -378,6 +395,10 @@
                     <span class="contact-icon">💬</span>
                     <span>Message on WhatsApp</span>
                 </a>
+                <a href="mailto:info@nitroxcheersg.com?subject=Inquiry%20about%20classes" class="contact-link email-link">
+                    <span class="contact-icon">✉️</span>
+                    <span>Send Email</span>
+                </a>
             </div>
             <div class="modal-divider"></div>
             <div class="social-section">
@@ -406,15 +427,20 @@
     
     var span = document.getElementsByClassName("close")[0];
     var overlay = document.querySelector(".modal-overlay");
+    var closeBtn = document.querySelector(".close");
 
     
     var openModal = function(event) {
         event.preventDefault();
         modal.style.display = "block";
+        // Focus management
+        modal.setAttribute('aria-hidden', 'false');
+        closeBtn.focus();
     }
 
     var closeModal = function() {
         modal.style.display = "none";
+        modal.setAttribute('aria-hidden', 'true');
     }
 
     btn.onclick = openModal;
@@ -469,6 +495,15 @@
             }
         });
 
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                reviewsTrack.scrollLeft -= 320;
+            } else if (e.key === 'ArrowRight') {
+                reviewsTrack.scrollLeft += 320;
+            }
+        });
+
         // Start auto-scroll
         autoScroll();
     }
@@ -490,7 +525,19 @@
                 mobileMenu.classList.remove('active');
             }
         });
+
+        // Video loading states
+        const videos = document.querySelectorAll('.bento-bg-video');
+        videos.forEach(video => {
+            video.addEventListener('loadeddata', function() {
+                video.classList.remove('loading');
+                video.classList.add('loaded');
+            });
+        });
     });
+
+
+    
 </script>
 
 </body>
