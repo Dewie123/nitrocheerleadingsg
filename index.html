@@ -79,43 +79,80 @@
         </div>
     </section>
 
-    <section class="bento-section" id="explore">
-
-        <div class="section-header">
+    <section class="explore-section" id="explore">
+        <div class="section-header explore-header">
             <p class="eyebrow">Explore</p>
-            <h2>The Cheerleading Ecosystem.</h2>
+            <h2>5 Training Cuts That Define Elite Cheer.</h2>
+            <p class="subheadline">See strength, timing, teamwork and performance come together in our most compelling cheer training videos. Each clip is designed to inspire new athletes and make signing up feel inevitable.</p>
         </div>
 
-        <div class="bento-grid">
-            <div class="bento-item featured" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
-                <video width="100%" height="100%" autoplay muted loop playsinline class="bento-bg-video">
-                        <source src="assets/cheerleading_2.mp4" type="video/mp4">
-                            
-                </video>    
-                <div class="bento-content">
-                    
-                    <h3>Competition Videos</h3>
-                    <p>Watch our competition highlights and achievements.</p>
-                </div>
-            </div>
-            <div class="bento-item">
-                <video autoplay muted loop playsinline class="bento-bg-video loading">
-                    <source src="assets/cheerleading_4.mp4" type="video/mp4">
-                </video> 
-                <div class="bento-content">
-                    <h3>Athlete Portal</h3>
-                    <p>Track progress and manage schedules.</p>
+        <div class="explore-body">
+            <div class="explore-intro">
+                <p class="eyebrow accent">Real training. Real energy. Real progress.</p>
+                <h3>Discover why NitroXCheerSG is Singapore’s most dynamic cheer home.</h3>
+                <p>From launch drills to routine flow, these five videos give you a front-row perspective on the discipline, artistry, and power behind every class. Perfect for newcomers, aspiring athletes, and anyone curious about the sport.</p>
+                <div class="explore-actions">
+                    <a href="#services" class="btn-solid">Book a trial class</a>
+                    <a href="#reviews" class="btn-link">See member success</a>
                 </div>
             </div>
 
-            <div class="bento-item">
-                <video autoplay muted loop playsinline class="bento-bg-video loading">
-                    <source src="assets/cheerleading_5.mp4" type="video/mp4">
-                </video> 
-                <div class="bento-content">
-                    <h3>Verified Reviews</h3>
-                    <p>Authentic community testimonials.</p>
-                </div>
+            <div class="explore-videos">
+                <article class="explore-video-card featured-card" tabindex="0" data-video-src="assets/cheerleading_training_1.mov" data-video-title="Power Stunt Training" data-video-description="Elite drills from our signature stunt modules designed to build confidence and explosive lift technique.">
+                    <video autoplay muted loop playsinline class="card-video">
+                        <source src="assets/cheerleading_training_1.mov" type="video/quicktime">
+                        Your browser does not support this video format.
+                    </video>
+                    <div class="video-overlay">
+                        <span class="eyebrow">Featured</span>
+                        <h3>Power Stunt Training</h3>
+                        <p>Elite drills from our signature stunt modules designed to build confidence and explosive lift technique.</p>
+                    </div>
+                </article>
+
+                <article class="explore-video-card" tabindex="0" data-video-src="assets/cheerleading_training_2.mov" data-video-title="Timing & Precision" data-video-description="Focus on crisp motion, rhythm, and execution that makes every routine stand out.">
+                    <video autoplay muted loop playsinline class="card-video">
+                        <source src="assets/cheerleading_training_2.mov" type="video/quicktime">
+                        Your browser does not support this video format.
+                    </video>
+                    <div class="video-overlay">
+                        <span class="eyebrow">Technique</span>
+                        <h3>Timing & Precision</h3>
+                    </div>
+                </article>
+
+                <article class="explore-video-card" tabindex="0" data-video-src="assets/cheerleading_training_3.mov" data-video-title="Dynamic Flight Drills" data-video-description="Strength and airtime training used to refine jumps and tumbling combinations.">
+                    <video autoplay muted loop playsinline class="card-video">
+                        <source src="assets/cheerleading_training_3.mov" type="video/quicktime">
+                        Your browser does not support this video format.
+                    </video>
+                    <div class="video-overlay">
+                        <span class="eyebrow">Conditioning</span>
+                        <h3>Dynamic Flight Drills</h3>
+                    </div>
+                </article>
+
+                <article class="explore-video-card" tabindex="0" data-video-src="assets/cheerleading_training_4.mov" data-video-title="Group Pyramid Flow" data-video-description="See collaborative skill and synchronization in action with group formation sequences.">
+                    <video autoplay muted loop playsinline class="card-video">
+                        <source src="assets/cheerleading_training_4.mov" type="video/quicktime">
+                        Your browser does not support this video format.
+                    </video>
+                    <div class="video-overlay">
+                        <span class="eyebrow">Teamwork</span>
+                        <h3>Group Pyramid Flow</h3>
+                    </div>
+                </article>
+
+                <article class="explore-video-card" tabindex="0" data-video-src="assets/cheerleading_training_5.mov" data-video-title="Routine Momentum" data-video-description="A polished performance clip showing the energy, creativity, and commitment of our teams.">
+                    <video autoplay muted loop playsinline class="card-video">
+                        <source src="assets/cheerleading_training_5.mov" type="video/quicktime">
+                        Your browser does not support this video format.
+                    </video>
+                    <div class="video-overlay">
+                        <span class="eyebrow">Performance</span>
+                        <h3>Routine Momentum</h3>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -466,6 +503,25 @@
     </div>
 </div>
 
+<div id="videoModal" class="modal video-modal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <div>
+                <h2 class="video-modal-title">Watch Training</h2>
+                <p class="video-modal-caption">Immersive training footage to help you feel the journey from warm-up to performance.</p>
+            </div>
+            <button class="close video-modal-close" aria-label="Close video">&times;</button>
+        </div>
+        <div class="modal-body video-modal-body">
+            <video controls autoplay muted playsinline class="video-modal-player">
+                <source src="" type="video/quicktime">
+                Your browser does not support video playback.
+            </video>
+        </div>
+    </div>
+</div>
+
 <script>
    
     var modal = document.getElementById("joinModal");
@@ -509,6 +565,64 @@
             closeModal();
         }
     }
+
+    var videoModal = document.getElementById("videoModal");
+    var videoModalOverlay = videoModal.querySelector(".modal-overlay");
+    var videoModalClose = videoModal.querySelector(".video-modal-close");
+    var videoPlayer = videoModal.querySelector(".video-modal-player");
+    var videoModalTitle = videoModal.querySelector(".video-modal-title");
+    var videoModalCaption = videoModal.querySelector(".video-modal-caption");
+    var videoCards = document.querySelectorAll('.explore-video-card');
+
+    function closeVideoModal() {
+        videoModal.style.display = "none";
+        videoModal.setAttribute('aria-hidden', 'true');
+        videoPlayer.pause();
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+    }
+
+    function openVideoModal(card) {
+        var title = card.dataset.videoTitle || 'Explore Cheer Training';
+        var caption = card.dataset.videoDescription || '';
+        var src = card.dataset.videoSrc;
+
+        if (!src) {
+            return;
+        }
+
+        videoModalTitle.textContent = title;
+        videoModalCaption.textContent = caption;
+        videoPlayer.src = src;
+        videoPlayer.load();
+        videoPlayer.play();
+
+        videoModal.style.display = "block";
+        videoModal.setAttribute('aria-hidden', 'false');
+        videoModalClose.focus();
+    }
+
+    videoCards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            openVideoModal(card);
+        });
+
+        card.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openVideoModal(card);
+            }
+        });
+    });
+
+    videoModalClose.onclick = closeVideoModal;
+    videoModalOverlay.onclick = closeVideoModal;
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && videoModal.style.display === 'block') {
+            closeVideoModal();
+        }
+    });
 
     // Auto-scroll reviews carousel
     var reviewsTrack = document.querySelector(".reviews-track");
