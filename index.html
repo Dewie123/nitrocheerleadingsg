@@ -9,9 +9,7 @@
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <nav class="glass-nav">
+    <nav class="glass-nav" aria-label="Primary navigation">
         <div class="nav-content">
             <a href="#" class="logo">NitroXCheerSG</a>
             <button class="hamburger" aria-label="Toggle navigation">
@@ -44,42 +42,36 @@
         <div class="hero-video-container">
             <img src="assets/cheerleading_1.jpg" alt="Hero Background">
         </div>
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <div class="hero-half cheer-half">
-                    <div class="hero-text">
-                        <p class="eyebrow-1">Master Elite Stunting</p>
-                        <h1>Cheerleading</h1>
-                        <p class="hero-description">Competitive cheerleading training with championship-winning coaches.</p>
-                        <div class="hero-actions">
-                            <a href="#cheer" class="btn-solid cheer-btn">Start Cheerleading</a>
-                            <a href="#cheer" class="btn-link">Learn more ></a>
-                        </div>
-                    </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-copy">
+                <p class="eyebrow-1">Singapore’s Premier Training Studio</p>
+                <h1>Cheerleading Classes & Gym Coaching</h1>
+                <p class="hero-description">Premium athlete development with purpose-built training for cheer, strength, and elite performance in a modern, polished setting.</p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn-solid">View Programs</a>
+                    <a href="#reviews" class="btn-link">Hear from athletes</a>
                 </div>
-                <div class="hero-half gym-half">
-                    <div class="hero-text">
-                        <p class="eyebrow-1">Build Strength & Power</p>
-                        <h1>Gym Coaching</h1>
-                        <p class="hero-description">Professional gymnastics and strength training programs.</p>
-                        <div class="hero-actions">
-                            <a href="#gym" class="btn-solid gym-btn">Start Gym Training</a>
-                            <a href="#gym" class="btn-link">Learn more ></a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="hero-cards">
+                <article class="hero-card card-cheer">
+                    <p class="eyebrow">Cheerleading Classes</p>
+                    <h3>Performance & Stunt Training</h3>
+                    <p>From foundation skills to competition-ready routines, our coaching builds confidence, timing, and team execution.</p>
+                    <a href="#cheer" class="btn-link">Learn more</a>
+                </article>
+                <article class="hero-card card-gym">
+                    <p class="eyebrow">Gym Coaching</p>
+                    <h3>Strength, Mobility & Conditioning</h3>
+                    <p>Structured gym programs for power, stability, and athletic longevity that complement high-performance cheer training.</p>
+                    <a href="#gym" class="btn-link">Learn more</a>
+                </article>
             </div>
         </div>
     </header>
 
-    <section class="value-prop">
-        <div class="content-wrapper">
-            <h2>Redefining Excellence.</h2>
-            <p>Training the next generation of elite local athletes with precision, community spirit, and a movement-first digital platform.</p>
-        </div>
-    </section>
-
-    <section class="explore-section" id="explore">
+    <main>
+      <section class="section explore-section" id="explore">
         <div class="section-header explore-header">
             <p class="eyebrow">Explore</p>
             <h2>5 Training Cuts That Define Elite Cheer.</h2>
@@ -157,7 +149,7 @@
         </div>
     </section>
 
-    <section class="split-feature" id="about">
+      <section class="section split-feature" id="about">
         <div class="feature-container">
             <div class="feature-image">
                 <img src="assets/cheerleading_3.jpg" alt="Collective Experience">
@@ -172,8 +164,8 @@
         </div>
     </section>
 
-    <section class="achievements-section" id="portfolio">
-    <div class="section-header">
+      <section class="section achievements-section" id="portfolio">
+        <div class="section-header">
         <p class="eyebrow">The Legacy</p>
         <h2>Competition Achievements.</h2>
     </div>
@@ -220,7 +212,7 @@
     </div>
 </section>
 
-<section class="services-section" id="services">
+      <section class="section services-section" id="services">
     <div class="section-header">
         <p class="eyebrow">Our Offerings</p>
         <h2>Professional Training Programs.</h2>
@@ -252,7 +244,7 @@
             </div>
         </article>
 
-        <article class="service-card cheer-service" id="cheer">
+        <article class="service-card cheer-service" id="cheer-advanced">
             <div class="service-header">
                 <h3>Advanced Partner Stunting</h3>
             </div>
@@ -277,7 +269,7 @@
             </div>
         </article>
 
-        <article class="service-card cheer-service" id="cheer">
+        <article class="service-card cheer-service" id="cheer-group">
             <div class="service-header">
                 <h3>Group Class (5 pax)</h3>
             </div>
@@ -329,7 +321,7 @@
     </div>
 </section>
 
-<section class="reviews-section" id="reviews">
+      <section class="section reviews-section" id="reviews">
     <div class="section-header">
         <p class="eyebrow">Customer Reviews</p>
         <h2>Hear directly from our Athletes.</h2>
@@ -444,6 +436,7 @@
         </div>
     </div>
 </section>
+    </main>
 
 <footer class="apple-footer">
     <div class="footer-grid">
