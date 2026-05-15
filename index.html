@@ -459,39 +459,25 @@
 </footer>
 
 <!-- Modal -->
-<div id="joinModal" class="modal">
+<div id="joinModal" class="modal" aria-hidden="true">
     <div class="modal-overlay"></div>
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Ready to Join Our Community?</h2>
-            <button class="close">&times;</button>
+    <div class="modal-content join-modal-content">
+        <button class="modal-close-btn" aria-label="Close">&times;</button>
+        <div class="join-modal-left">
+            <p class="join-eyebrow">Get Started</p>
+            <h2 class="join-title">Join Our<br>Squad Today</h2>
+            <p class="join-subtitle">Get in touch with us to enroll in our classes and elevate your performance!</p>
+            <div class="join-actions">
+                <a href="https://wa.me/6593955772?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="join-btn join-btn-primary">💬&nbsp; Message on WhatsApp</a>
+                <a href="mailto:info@nitroxcheersg.com?subject=Inquiry%20about%20classes" class="join-btn join-btn-outline">✉️&nbsp; Send an Email</a>
+            </div>
+            <a href="https://www.instagram.com/nitro_gainz/" target="_blank" class="join-instagram">
+                <i class="fa fa-instagram"></i>
+                Follow us @nitro_gainz
+            </a>
         </div>
-        <div class="modal-body">
-            <p class="modal-subtitle">Get in touch with us today to enroll in our classes and elevate your game!</p>
-            <div class="modal-divider"></div>
-            <div class="contact-section">
-                <h3>Contact Us</h3>
-                <a href="https://wa.me/6593955772?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="contact-link whatsapp-link">
-                    <span class="contact-icon">💬</span>
-                    <span>Message on WhatsApp</span>
-                </a>
-                <a href="mailto:info@nitroxcheersg.com?subject=Inquiry%20about%20classes" class="contact-link email-link">
-                    <span class="contact-icon">✉️</span>
-                    <span>Send Email</span>
-                </a>
-            </div>
-            <div class="modal-divider"></div>
-            <div class="social-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#" class="social-link facebook-link" title="Facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="#" class="social-link instagram-link" title="Instagram">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="join-modal-right">
+            <img src="assets/cheerleading_1.jpg" alt="Nitro Cheerleading" class="join-modal-img">
         </div>
     </div>
 </div>
@@ -518,23 +504,16 @@
 <script>
    
     var modal = document.getElementById("joinModal");
-
-   
     var btn = document.querySelector(".nav-cta");
     var enrollBtns = document.querySelectorAll(".enroll-btn");
+    var joinCloseBtn = modal.querySelector(".modal-close-btn");
+    var joinOverlay = modal.querySelector(".modal-overlay");
 
-    
-    var span = document.getElementsByClassName("close")[0];
-    var overlay = document.querySelector(".modal-overlay");
-    var closeBtn = document.querySelector(".close");
-
-    
     var openModal = function(event) {
         event.preventDefault();
-        modal.style.display = "block";
-        // Focus management
+        modal.style.display = "flex";
         modal.setAttribute('aria-hidden', 'false');
-        closeBtn.focus();
+        joinCloseBtn.focus();
     }
 
     var closeModal = function() {
@@ -548,11 +527,9 @@
         enrollBtn.onclick = openModal;
     });
 
-    
-    span.onclick = closeModal;
-    overlay.onclick = closeModal;
+    joinCloseBtn.onclick = closeModal;
+    joinOverlay.onclick = closeModal;
 
-    
     window.onclick = function(event) {
         if (event.target == modal) {
             closeModal();
